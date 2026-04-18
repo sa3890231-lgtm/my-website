@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIGITAL HUB | Revenue Architect Shahnawaz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg: #000; --text: #fff; --accent: #0071e3; --card: #111112; --border: #222; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+        body { background: var(--bg); color: var(--text); overflow-x: hidden; scroll-behavior: smooth; line-height: 1.6; }
+
+        /* Navigation */
+        nav {
+            position: fixed; top: 0; width: 100%; height: 60px;
+            background: rgba(0,0,0,0.8); backdrop-filter: blur(20px);
+            z-index: 1000; display: flex; justify-content: center; align-items: center;
+            border-bottom: 0.5px solid var(--border); font-weight: 600; letter-spacing: 1px;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh; display: flex; flex-direction: column; 
+            align-items: center; justify-content: center; text-align: center; padding: 120px 20px 60px;
+        }
+        .profile-container {
+            width: 180px; height: 180px; border-radius: 50%;
+            border: 2px solid var(--accent); overflow: hidden;
+            margin-bottom: 30px; box-shadow: 0 0 40px rgba(0, 113, 227, 0.2);
+        }
+        .profile-container img { width: 100%; height: 100%; object-fit: cover; }
+        .hero h1 { font-size: clamp(40px, 10vw, 85px); font-weight: 800; line-height: 1; letter-spacing: -3px; }
+        .hero span { color: var(--accent); }
+        .hero p { color: #888; font-size: 18px; max-width: 600px; margin: 25px 0; }
+
+        /* Sections Styling */
+        .section { padding: 100px 10%; }
+        .section-tag { color: var(--accent); text-transform: uppercase; font-size: 12px; font-weight: 800; letter-spacing: 2px; display: block; text-align: center; margin-bottom: 10px; }
+        .section-title { font-size: 40px; font-weight: 700; text-align: center; margin-bottom: 50px; }
+
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+        .card { background: var(--card); padding: 40px; border-radius: 28px; border: 1px solid var(--border); transition: 0.4s; }
+        .card:hover { border-color: var(--accent); transform: translateY(-10px); }
+        .card h3 { font-size: 22px; margin-bottom: 15px; }
+        .card p { color: #86868b; font-size: 15px; }
+
+        /* Testimonial Slider */
+        .slider-wrapper { display: flex; gap: 20px; overflow-x: auto; padding: 20px 0; scrollbar-width: none; }
+        .slider-wrapper::-webkit-scrollbar { display: none; }
+        .t-card { min-width: 300px; background: #0a0a0a; padding: 30px; border-radius: 20px; border: 1px solid var(--border); }
+
+        /* Pricing & Offer */
+        .price-card { text-align: center; border: 2px solid var(--accent); background: linear-gradient(180deg, #001226 0%, #000 100%); }
+        .price-card .amt { font-size: 60px; font-weight: 800; margin: 20px 0; }
+        
+        /* Lead Form */
+        .form-container { max-width: 600px; margin: 0 auto; background: var(--card); padding: 40px; border-radius: 30px; border: 1px solid var(--border); }
+        input, select { 
+            width: 100%; padding: 15px; margin-bottom: 15px; border-radius: 12px; 
+            border: 1px solid #333; background: #000; color: #fff; font-size: 16px; 
+        }
+
+        .btn-main {
+            background: var(--text); color: #000; padding: 18px 45px;
+            border-radius: 50px; text-decoration: none; font-weight: 800;
+            display: inline-block; width: 100%; text-align: center; border: none; cursor: pointer; transition: 0.3s;
+        }
+        .btn-main:hover { background: var(--accent); color: white; }
+
+        /* Animation */
+        .reveal { opacity: 0; transform: translateY(30px); transition: 1s ease; }
+        .active { opacity: 1; transform: translateY(0); }
+
+        footer { padding: 80px; text-align: center; color: #444; border-top: 0.5px solid var(--border); }
+    </style>
+</head>
+<body>
+
+<nav>DIGITAL HUB</nav>
+
+<section class="hero">
+    <div class="profile-container reveal active">
+        <img src="IMG_5532.jpg" alt="Shahnawaz">
+    </div>
+    <h1 class="reveal active">Shahnawaz<span>.</span></h1>
+    <p class="reveal active">Revenue Architect & Digital Growth Expert. Hum business ke liye "Grand Slam Offers" aur High-Converting Lead Engines design karte hain.</p>
+    <a href="#leads" class="btn-main reveal active" style="width: auto;">Start Your Transformation</a>
+</section>
+
+<section id="leads" class="section">
+    <span class="section-tag reveal">The Strategy</span>
+    <h2 class="section-title reveal">Marketing Sources</h2>
+    <div class="grid">
+        <div class="card reveal">
+            <h3>Social Authority</h3>
+            <p>Hormozi-style content strategy jo aapko market mein dominate karne me help karegi. Hum sirf view nahi, "Value" build karte hain.</p>
+        </div>
+        <div class="card reveal">
+            <h3>Growth Campaigns</h3>
+            <p>Meta aur Google ads funnel jo har ₹1 investment ko ₹5+ ROI mein badalne ke liye engineer kiya gaya hai.</p>
+        </div>
+        <div class="card reveal">
+            <h3>Lead Automation</h3>
+            <p>Aapka business 24/7 chalega. Leads khud filter hokar aapke WhatsApp par aayengi, bina aapka waqt barbad kiye.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section" style="background: #050505;">
+    <span class="section-tag reveal">Knowledge Hub</span>
+    <h2 class="section-title reveal">My Learning Source</h2>
+    <div class="grid">
+        <div class="card reveal">
+            <h3>Global Frameworks</h3>
+            <p>Main wahi strategies apply karta hoon jo $100M companies use karti hain. Mere core concepts in books par based hain:</p>
+            <ul style="margin-top:15px; list-style:none; color:var(--accent); font-weight:600;">
+                <li>• $100M Offers (Alex Hormozi)</li>
+                <li>• DotCom Secrets (Russell Brunson)</li>
+                <li>• Psychology of Selling</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <span class="section-tag reveal">Proof</span>
+    <h2 class="section-title reveal">Client Success</h2>
+    <div class="slider-wrapper reveal">
+        <div class="t-card">
+            <p>"Digital Hub ne hamara ad budget 40% kam kiya aur sales 3x badha di. Shahnawaz is a genius!"</p>
+            <h5 style="margin-top:15px; color:var(--accent);">- Rahul S.</h5>
+        </div>
+        <div class="t-card">
+            <p>"Best lead generation system in India. Professional and high quality leads."</p>
+            <h5 style="margin-top:15px; color:var(--accent);">- Aman V.</h5>
+        </div>
+        <div class="t-card">
+            <p>"Finally a marketing agency that understands business psychology. Amazing results."</p>
+            <h5 style="margin-top:15px; color:var(--accent);">- Priya M.</h5>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <span class="section-tag reveal">Investment</span>
+    <div class="grid">
+        <div class="card price-card reveal">
+            <h4 style="letter-spacing:2px; font-size:12px;">REVENUE PRO ENGINE</h4>
+            <div class="amt">₹999</div>
+            <p style="color:#888; margin-bottom:30px;">Full Meta Ads Setup + Lead Automation + Growth Audit</p>
+            
+            <div class="form-container">
+                <h4 style="margin-bottom:20px; font-size:16px;">Reserve Your Slot</h4>
+                <input type="text" id="name" placeholder="Aapka Naam" required>
+                <input type="text" id="business" placeholder="Business ka Naam" required>
+                <select id="service">
+                    <option value="999 Plan">Revenue Pro (999)</option>
+                    <option value="Social Media">Social Media Branding</option>
+                    <option value="Custom">Custom Growth Strategy</option>
+                </select>
+                <button onclick="submitLead()" class="btn-main">Scale My Business →</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    &copy; 2026 DIGITAL HUB | Strategic Marketing by Shahnawaz.
+</footer>
+
+<script>
+    function submitLead() {
+        const name = document.getElementById('name').value;
+        const biz = document.getElementById('business').value;
+        const service = document.getElementById('service').value;
+        
+        if(name && biz) {
+            const message = `Hello Shahnawaz, Mera naam ${name} hai. Mere business ka naam ${biz} hai aur mujhe ${service} me help chahiye.`;
+            const waUrl = `https://wa.me/919917709864?text=${encodeURIComponent(message)}`;
+            window.open(waUrl, '_blank');
+        } else {
+            alert("Sari details bhariye!");
+        }
+    }
+
+    function reveal() {
+        var reveals = document.querySelectorAll(".reveal");
+        for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var elementTop = reveals[i].getBoundingClientRect().top;
+            if (elementTop < windowHeight - 100) {
+                reveals[i].classList.add("active");
+            }
+        }
+    }
+    window.addEventListener("scroll", reveal);
+    reveal();
+</script>
+
+</body>
+</html>
